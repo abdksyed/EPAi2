@@ -4,11 +4,11 @@
 Click on **Open in Colab** for hands-on.
 
 ### Topic Covered:
-#### Multi-Line Statements and Strings
-#### Conditional Statements
-#### Basics of Functions
-#### Basics of *while* and *for* loop
-#### try-except-finally
+* #### Multi-Line Statements and Strings
+* #### Conditional Statements
+* #### Basics of Functions
+* #### Basics of *while* and *for* loop
+* #### try-except-finally
 
 ## Assignment Objective - CI/CD Practice
 
