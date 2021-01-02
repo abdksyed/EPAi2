@@ -12,4 +12,4 @@ Click on **Open in Colab** for hands-on.
 
 ## Assignment Objective - CI/CD Practice
 
-The Assignment is to Test the Github actions 
+The Assignment is to Test the **Github Actions**, by creating a basic python program and testing it using Unit Testing.
