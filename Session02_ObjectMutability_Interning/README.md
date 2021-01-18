@@ -22,7 +22,11 @@ Click on **Open in Colab** for hands-on.
 # Assignment 2
 
 ## Assignment Objective - Performance Testing and Memory Leakage.
-The 
+The Assignment is to create a Cyclic Reference, and than call Garbage Collector to remove the cyclic reference, 
+and to test the working, the memory_usage function from memory_profiler is being used.
+
+And to test the performance of usage of interning and sets/forzensets when compared to non-interned strings and lists, we are comparing long strings and searching for characters in a iterable respectively.
+This is done by repeating it for vary large values (like 10000000) and comparing the time difference, and the objective is to acheive 10 times the speed of using non-interned string and lists. 
 
 ## Classes and Functions Used:
 
