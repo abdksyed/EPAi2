@@ -12,7 +12,7 @@ finally:
 
 from memory_profiler import memory_usage
 import pytest
-import session2
+from Session02_ObjectMutability_Interning import session2
 import time
 import os.path
 import re
@@ -87,7 +87,8 @@ def test_readme_proper_description():
 
 
 def test_readme_file_for_formatting():
-    f = open("README.md", "r", encoding="utf-8")
+    f = open("Session02_ObjectMutability_Interning/README.md",
+             "r", encoding="utf-8")
     content = f.read()
     f.close()
     assert content.count("#") >= 10
