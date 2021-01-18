@@ -63,11 +63,11 @@ def test_performance():
 
 
 def test_readme_exists():
-    assert os.path.isfile("README.md"), "README.md file missing!"
+    assert os.path.isfile("Session02_ObjectMutability_Interning/README.md"), "README.md file missing!"
 
 
 def test_readme_contents():
-    readme = open("README.md", "r")
+    readme = open("Session02_ObjectMutability_Interning/README.md", "r")
     readme_words = readme.read().split()
     readme.close()
     assert len(
@@ -76,7 +76,7 @@ def test_readme_contents():
 
 def test_readme_proper_description():
     READMELOOKSGOOD = True
-    f = open("README.md", "r")
+    f = open("Session02_ObjectMutability_Interning/README.md", "r")
     content = f.read()
     f.close()
     for c in README_CONTENT_CHECK_FOR:
