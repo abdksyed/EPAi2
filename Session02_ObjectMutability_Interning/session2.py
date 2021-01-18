@@ -57,8 +57,9 @@ def clear_memory(collection: List[Something]):
     '''A function which take a list as input and performs clearing
         the list and clearing all cyclic references using garbage collector.'''
 
+    # Empties the Entire List but leaves the Cyclic Refences.
     collection.clear()
-    gc.collect()
+    gc.collect()  # Run Garbage Collector and removes all Cyclic References
 
 
 def critical_function():

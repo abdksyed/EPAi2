@@ -22,10 +22,10 @@ Click on **Open in Colab** for hands-on.
 # Assignment 2
 
 ## Assignment Objective - Performance Testing and Memory Leakage.
-The Assignment is to create a Cyclic Reference, and than call Garbage Collector to remove the cyclic reference, 
-and to test the working, the memory_usage function from memory_profiler is being used.
+The Assignment is to **create a Cyclic Reference**, and try to remove it.  
+To test the working, the **memory_usage** function from **memory_profiler** is being used.
 
-And to test the performance of usage of interning and sets/forzensets when compared to non-interned strings and lists, we are comparing long strings and searching for characters in a iterable respectively.
+Also, the second part of Assignment is to test the **performance of usage of interning and sets/forzensets when compared to non-interned strings and lists**, we are comparing long strings and searching for characters in a iterable respectively.
 This is done by repeating it for vary large values (like 10000000) and comparing the time difference, and the objective is to acheive 10 times the speed of using non-interned string and lists. 
 
 ## Classes and Functions Used:
@@ -34,44 +34,45 @@ This is done by repeating it for vary large values (like 10000000) and comparing
 ```python
 class Something(object):
     '''A dummy Class which is used to create Cyclic References'''
-    
+
     def __init__(self):
         super().__init__()
-        self.something_new = None    
-        
+        self.something_new = None
+
     def __repr__(self):
-    return f'Hey You Found Something'
+        return f'Something at {id(self)} which has something_new at {id(self.something_new)}.'
 ```
 The class has only one variable 'something_new', which is used later by directly calling using the instance of the class.
 
 ### SomethingNew -> Class inherited from **object**
 ```python
-class  SomethingNew(object):
+class SomethingNew(object):
     '''Anothe Dummy Class which is used to create Cyclic Reference.
         Arguments:
         i -> int -> default= 0. Just a variable.
         Something -> Class Object -> default= None'''
-    
-    def  __init__(self, i: int = 0, something: Something = None):
+
+    def __init__(self, i: int = 0, something: Something = None):
         super().__init__()
         self.i = i
         self.something = something
-    
-    def  __repr__(self):
-        return  f'Hey You Again Found Something New'
+
+    def __repr__(self):
+        return f'SomethingNew at {id(self)} which has only something at {id(self.something)}.'
 ```
-The class have two inputs, *i* which is an integer and another something*, which is use to assign another class object to this variable.
+The class have two inputs, *i* which is an integer and another *something*, which is use to assign another class object to this variable.
 
 ### add_something -> Function
 ```python
-def  add_something(collection: List[Something], i: int):
+def add_something(collection: List[Something], i: int):
     '''A Function which takes a list and int as input.
-    Creates Cyclic References using Two Class Objects and append
-    it to the main list.'''
-    
+        Creates Cyclic References using Two Class Objects and append
+        it to the main list.'''
+
     something = Something()
     something.something_new = SomethingNew(i, something)
     collection.append(something)
+
 ```
 This function creates instances of two classes *Something* and *SomethingNew*, the object of *Something* is assigned to variable *something* and the internal variable of *something* is assigned the object of *SomethingNew*
 Hence creating a Cyclic Reference SUCCESSFULLY! :) :) :)
@@ -91,7 +92,7 @@ def  clear_memory(collection: List[Something]):
     '''A function which take a list as input and performs clearing
     the list and clearing all cyclic references using garbage collector.'''
 
-    collection.clear() #Empties the Entire List
+    collection.clear() #Empties the Entire List but leaves the Cyclic Refences.
     gc.collect() #Run Garbage Collector and removes all Cyclic References
 ```
 This is the heart of the program, which prevents the program from parking and leaking the memory. It explicitly calls the Garbage Collector after clearing the list which has all(131,072) the cyclic objects appended to it.
