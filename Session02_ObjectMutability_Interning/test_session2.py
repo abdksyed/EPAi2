@@ -12,7 +12,7 @@ finally:
 
 from memory_profiler import memory_usage
 import pytest
-from Session02_ObjectMutability_Interning import session2
+import Session02_ObjectMutability_Interning/session2 as session2
 import time
 import os.path
 import re
