@@ -1,6 +1,6 @@
 # Session 3 - Numeric Types I
 
-### [Class Notebook](https://github.com/abdksyed/EPAi2/blob/main/Session03_Numeric_Types_I/notebooks/Session%202%20-%20Object%20Mutability%20and%20Intering.ipynb)
+### [Class Notebook](https://github.com/abdksyed/EPAi2/blob/main/Session03_Numeric_Types_I/notebooks/Session%302%20-%20NUmerical%20Types%20I.ipynb)
 Click on **Open in Colab** for hands-on.
 
 ### Topic Covered:
