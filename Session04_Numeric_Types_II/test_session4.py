@@ -28,7 +28,7 @@ def test_readme_exists():
 
 def test_readme_contents():
     readme_words = [word for line in open(
-        "Session04_Numeric_Types_II/README.md"'r', encoding="utf-8") for word in line.split()]
+        "Session04_Numeric_Types_II/README.md", 'r', encoding="utf-8") for word in line.split()]
     assert len(
         readme_words) >= 500, "Make your README.md interesting! Add atleast 500 words"
 
