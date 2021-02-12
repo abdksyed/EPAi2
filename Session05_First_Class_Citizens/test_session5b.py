@@ -1,10 +1,10 @@
 import pytest
 import random
-import session5b
+from Session05_First_Class_Citizens import session5b
 import os
 import inspect
 import re
-import test_session5b
+from Session05_First_Class_Citizens import test_session5b
 
 README_CONTENT_CHECK_FOR = [
     'list',

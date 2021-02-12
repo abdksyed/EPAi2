@@ -1,10 +1,10 @@
 import pytest
 import random
-import session5a
+from Session05_First_Class_Citizens import session5a
 import os
 import inspect
 import re
-import test_session5a
+from Session05_First_Class_Citizens import test_session5a
 
 README_CONTENT_CHECK_FOR = [
     'royal_flush',

@@ -19,48 +19,51 @@ def check_fib(check_list: list) -> list:
         raise TypeError('check_list must be of type <list>')
     for val in check_list:
         if val < 0 or val > 10000:
-            raise ValueError('The values in list must be in between 0 and 10000')
+            raise ValueError(
+                'The values in list must be in between 0 and 10000')
     return list(filter(lambda x: x in fib_prestored, check_list))
 
 
-add_even_odd = lambda l1,l2: list(map(
+def add_even_odd(l1, l2): return list(map(
     lambda a: a[0]+a[1], list(filter(lambda x:  x[0] % 2 == 0 and x[1] % 2 != 0, zip(l1, l2)))))
-add_even_odd_direct = lambda l1,l2: [x+y for x,
-                       y in zip(l1, l2) if x % 2 == 0 and y % 2 != 0]
 
 
-strip_vowel = lambda inp_string: ''.join(
+def add_even_odd_direct(l1, l2): return [x+y for x,
+                                         y in zip(l1, l2) if x % 2 == 0 and y % 2 != 0]
+
+
+def strip_vowel(inp_string): return ''.join(
     [x for x in inp_string if x not in ['a', 'e', 'i', 'o', 'u']])
 
 
-relu = lambda neurons: [x if x >= 0 else 0 for x in neurons]
+def relu(neurons): return [x if x >= 0 else 0 for x in neurons]
 
 
-sigmoid = lambda neurons: [1/(1+math.exp(x)) for x in neurons]
+def sigmoid(neurons): return [1/(1+math.exp(x)) for x in neurons]
 
 
-shifted_string = lambda small_char_string: ''.join([chr({118: 92, 119: 93, 120: 94, 121: 95, 122: 96}.get(ord(x), ord(x))+5)
-                          for x in small_char_string])
+def shifted_string(small_char_string): return ''.join([chr({118: 92, 119: 93, 120: 94, 121: 95, 122: 96}.get(ord(x), ord(x))+5)
+                                                       for x in small_char_string])
 
 
-
-with open("swear_words.txt", "r") as f:
+with open("Session05_First_Class_Citizens\swear_words.txt", "r") as f:
     swear_words_master = f.read().split()
-    
-swear_word_list = lambda inp_text: [x for x in inp_text.split() if x.lower()
-                   in swear_words_master]
 
 
-add_even_odd_reduce = lambda num_list: reduce(
+def swear_word_list(inp_text): return [x for x in inp_text.split() if x.lower()
+                                       in swear_words_master]
+
+
+def add_even_odd_reduce(num_list): return reduce(
     lambda x, y: x+y, filter(lambda x: x % 2 == 0, num_list))
 
 
-big_char = lambda small_char_string: reduce(lambda x, y: x if ord(x) > ord(y) else y, small_char_string)
+def big_char(small_char_string): return reduce(
+    lambda x, y: x if ord(x) > ord(y) else y, small_char_string)
 
 
-add_3rd = lambda num_list: reduce(lambda x, y: x+y, [num_list[i-1]
-                                    for i in range(1, len(num_list)+1) if i % 3 == 0])
-
+def add_3rd(num_list): return reduce(lambda x, y: x+y, [num_list[i-1]
+                                                        for i in range(1, len(num_list)+1) if i % 3 == 0])
 
 
 num_plates = [('KA'+str(random.randint(10, 99))+chr(random.randint(65, 90)) +
