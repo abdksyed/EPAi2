@@ -1,10 +1,10 @@
 import pytest
 import random
-from Session05_First_Class_Citizens import session5b
+import session5b
 import os
 import inspect
 import re
-from Session05_First_Class_Citizens import test_session5b
+import test_session5b
 
 README_CONTENT_CHECK_FOR = [
     'list',
@@ -24,11 +24,11 @@ CHECK_FOR_THINGS_NOT_ALLOWED = []
 
 def test_readme_exists_5b():
     assert os.path.isfile(
-        "Session05_First_Class_Functions\README.md"), "README.md file missing!"
+        r"Session05_First_Class_Functions\README.md"), "README.md file missing!"
 
 
 def test_readme_contents_5b():
-    readme = open("Session05_First_Class_Functions\README.md",
+    readme = open(r"Session05_First_Class_Functions\README.md",
                   "r", encoding="utf8")
     readme_words = readme.read().split()
     readme.close()
@@ -38,7 +38,7 @@ def test_readme_contents_5b():
 
 def test_readme_proper_description_5b():
     READMELOOKSGOOD = True
-    f = open("Session05_First_Class_Functions\README.md", "r", encoding="utf8")
+    f = open(r"Session05_First_Class_Functions\README.md", "r", encoding="utf8")
     content = f.read()
     f.close()
     for c in README_CONTENT_CHECK_FOR:
@@ -50,7 +50,7 @@ def test_readme_proper_description_5b():
 
 
 def test_readme_file_for_formatting_5b():
-    f = open("Session05_First_Class_Functions\README.md", "r", encoding="utf8")
+    f = open(r"Session05_First_Class_Functions\README.md", "r", encoding="utf8")
     content = f.read()
     f.close()
     assert content.count("#") >= 10

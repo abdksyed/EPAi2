@@ -46,7 +46,7 @@ def shifted_string(small_char_string): return ''.join([chr({118: 92, 119: 93, 12
                                                        for x in small_char_string])
 
 
-with open("Session05_First_Class_Citizens\swear_words.txt", "r") as f:
+with open(r"Session05_First_Class_Citizens\swear_words.txt", "r") as f:
     swear_words_master = f.read().split()
 
 
