@@ -1,6 +1,6 @@
 # Session 5 - First Class Functions
 
-### [Class Notebook](https://github.com/abdksyed/EPAi2/blob/main/Session04_Numeric_Types_II/notebooks/Session%204%20-%20Numerical%20Types%20II%20And%20Functions.ipynb)
+### [Class Notebook](https://github.com/abdksyed/EPAi2/blob/main/Session05_First_Class_Citizens/notebooks/Session_5_First_Class_Citizens.ipynb)
 Click on **Open in Colab** for hands-on.
 
 ### Topic Covered:
