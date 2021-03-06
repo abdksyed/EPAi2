@@ -24,6 +24,9 @@ def encoded_from_base10(number, base, digit_map):
     if len(digit_map) != len(set(digit_map)):
         raise ValueError("digit_map can't have repeating characters.")
 
+    if number == 0:
+        return '0'
+
     if number < 0:
         sign = '-'
         number *= -1
