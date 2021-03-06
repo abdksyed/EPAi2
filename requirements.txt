@@ -1,2 +1,6 @@
 pytest
 memory-profiler
+numpy
+pandas
+matplotlib
+faker
