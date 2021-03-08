@@ -1,5 +1,7 @@
 # Session 6a - Scopes and Closures
 
+### [Hand Written Notes](https://github.com/abdksyed/EPAi2/blob/main/Session06_Scope_Closure_Decorators/notebooks/HandNotes.pdf)
+
 ### [Class Notebook - Closures](https://github.com/abdksyed/EPAi2/blob/main/Session06_Scope_Closure_Decorators/notebooks/Closures.ipynb)  
 Click on **Open in Colab** for hands-on.
 
