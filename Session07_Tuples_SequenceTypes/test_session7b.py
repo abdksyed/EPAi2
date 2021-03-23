@@ -28,11 +28,13 @@ CHECK_FOR_THINGS_NOT_ALLOWED = []
 
 
 def test_readme_exists():
-    assert os.path.isfile("Session07_Tuples_SequenceTypes/README.md"), "README.md file missing!"
+    assert os.path.isfile(
+        "Session07_Tuples_SequenceTypes/README.md"), "README.md file missing!"
 
 
 def test_readme_contents():
-    readme = open("Session07_Tuples_SequenceTypes/README.md", "r", encoding="utf8")
+    readme = open("Session07_Tuples_SequenceTypes/README.md",
+                  "r", encoding="utf8")
     readme_words = readme.read().split()
     readme.close()
     assert len(
