@@ -6,3 +6,4 @@
 ## Session 04 - [Numeric Types II](https://github.com/abdksyed/EPAi2/tree/main/Session04_Numeric_Types_II)
 ## Session 05 - [First Class Citizens(Functions)](https://github.com/abdksyed/EPAi2/tree/main/Session05_First_Class_Citizens)
 ## Session 06 - [Scopes, Closures and Decorators](https://github.com/abdksyed/EPAi2/tree/main/Session06_Scope_Closure_Decorators)
+## Session 07 - [Tuples and Sequence Types](https://github.com/abdksyed/EPAi2/tree/main/Session07_Tuples_SequenceTypes)
