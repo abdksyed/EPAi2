@@ -74,7 +74,7 @@ def test_function_repeatations():
 
 
 def test_notebook_exists():
-    assert glob.glob('*.ipynb')
+    assert glob.glob('Session07_Tuples_SequenceTypes/*.ipynb')
 # ----------------------------------------------Default checks End--------------------------------------------------#
 
 
