@@ -21,15 +21,15 @@ class PolySeq():
     @property
     def max_eff(self):
         eff = dict()
-        for i in range(3, self._n+1):
-            eff[self[i].area/self[i].perimeter] = i
+        for i in self:
+            eff[i.area/i.perimeter] = i.edges
         return {eff[max(eff)]: max(eff)}
 
     def __getitem__(self, s):
         if isinstance(s, int):
             # single item requested
             if s < 0:
-                s = self._n
+                s = self._n + s + 1
             if s < 3 or s > self._n:
                 raise IndexError(
                     f'Index for this Sequence begins at 3 and ends at {self._n}')
