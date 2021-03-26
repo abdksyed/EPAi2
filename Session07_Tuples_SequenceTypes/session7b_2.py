@@ -21,8 +21,8 @@ class PolySeq():
     @property
     def max_eff(self):
         eff = dict()
-        for i in self:
-            eff[i.area/i.perimeter] = i.edges
+        for i in range(3, self._n+1):
+            eff[self[i].area/self[i].perimeter] = i
         return {eff[max(eff)]: max(eff)}
 
     def __getitem__(self, s):
